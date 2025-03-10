@@ -50,7 +50,7 @@ Em casos refratários, considerar terapias avançadas, como bomba de levodopa-ca
 
 ## Restrições de Uso
 - **Uso Médico Exclusivo**: Este aplicativo foi projetado para ser uma ferramenta de suporte para médicos. Seu uso é restrito a profissionais de saúde qualificados. Não deve ser utilizado por pacientes, cuidadores ou outros indivíduos sem formação médica, devido ao risco de interpretação inadequada ou ajustes perigosos na medicação.
-- **Responsabilidade do Usuário**: Embora licenciado sob a MIT, os desenvolvedores recomendam fortemente que apenas médicos utilizem esta ferramenta, conforme os termos de uso indicados.
+- **Responsabilidade do Usuário**: Embora licenciado sob a MIT, recomendo fortemente que apenas médicos utilizem esta ferramenta, conforme os termos de uso indicados.
 
 ## Licença
 Este projeto é licenciado sob a **Licença MIT**:
@@ -60,7 +60,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-**Nota sobre Restrição**: Embora a Licença MIT permita o uso irrestrito do código, os desenvolvedores declaram que este aplicativo é destinado exclusivamente ao uso por médicos. Essa restrição é uma recomendação ética e prática, não uma limitação legal imposta pela licença. Usuários são responsáveis por aderir a essa orientação.
+**Nota sobre Restrição**: Embora a Licença MIT permita o uso irrestrito do código, reitero que este aplicativo é destinado exclusivamente ao uso por médicos. Essa restrição é uma recomendação ética e prática, não uma limitação legal imposta pela licença. Usuários são responsáveis por aderir a essa orientação.
 
 ## Futuras Melhorias
 - Integração com arquivo JSON para importação automática de prescrições.
