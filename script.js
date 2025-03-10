@@ -88,7 +88,7 @@ document.getElementById('dosageForm').addEventListener('submit', function(e) {
         <p><strong>UPDRS Discinesia:</strong> ${updrsDyskinesia}</p>
         <p><strong>Sugestão:</strong> ${sugestao}</p>
         <p><strong>Detalhes:</strong> ${ajuste}</p>
-        <p><em>Sempre consulte um médico antes de ajustar a medicação.</em></p>
+        <p><em>Essas são apenas sugestões. Em casos complicados, considere referenciar a um especialista em Transtornos de Movimento</em></p>
     `;
 });
 
