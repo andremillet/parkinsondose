@@ -75,7 +75,7 @@ document.getElementById('dosageForm').addEventListener('submit', function(e) {
         3. Em casos refratários, considerar terapias avançadas, como bomba de levodopa-carbidopa intestinal (LCIG) ou estimulação cerebral profunda (DBS), conforme idade e estado geral do paciente.`;
     } else {
         sugestao = 'Pode ser necessário ajustar a dosagem.';
-        ajuste = 'O controle misto dos sintomas e efeitos colaterais sugere uma abordagem personalizada. Consulte um médico para avaliação detalhada.';
+        ajuste = 'O controle misto dos sintomas e efeitos colaterais sugere uma abordagem personalizada. Considere referenciar para um espécialista em Transtornos do Movimento';
     }
 
     // Exibir resultado
