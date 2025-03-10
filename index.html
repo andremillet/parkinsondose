@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugestão de Dosagem para Parkinson com Calculadora UPDRS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sugestão de Dosagem para Parkinson</h1>
+        <p>Insira as doses diárias totais (mg) e selecione os escores da UPDRS para obter uma sugestão.</p>
+        
+        <form id="dosageForm">
+            <h2>Doses dos Medicamentos (mg/dia)</h2>
+            <label>Levodopa: <input type="number" id="levodopa" min="0" step="1" required></label><br>
+            <label>Carbidopa: <input type="number" id="carbidopa" min="0" step="1"></label><br>
+            <label>Benserazida: <input type="number" id="benserazide" min="0" step="1"></label><br>
+            <label>Rasagilina: <input type="number" id="rasagiline" min="0" step="0.1"></label><br>
+            <label>Pramipexol: <input type="number" id="pramipexole" min="0" step="0.1"></label><br>
+            <label>Biperideno: <input type="number" id="biperiden" min="0" step="0.1"></label><br>
+
+            <h2>Calculadora UPDRS</h2>
+            <h3>Parte III - Exame Motor (estado "on")</h3>
+            <p>Selecione a opção que melhor descreve o estado atual (0-4). O total será calculado automaticamente.</p>
+
+            <div class="updrs-item">
+                <strong>Fala:</strong><br>
+                <label><input type="radio" name="motorSpeech" value="0" required> 0: Normal</label><br>
+                <label><input type="radio" name="motorSpeech" value="1"> 1: Leve alteração (fala audível, mas menos clara)</label><br>
+                <label><input type="radio" name="motorSpeech" value="2"> 2: Moderada (difícil de entender)</label><br>
+                <label><input type="radio" name="motorSpeech" value="3"> 3: Severa (quase ininteligível)</label><br>
+                <label><input type="radio" name="motorSpeech" value="4"> 4: Ininteligível</label>
+            </div>
+
+            <div class="updrs-item">
+                <strong>Expressão Facial:</strong><br>
+                <label><input type="radio" name="motorFace" value="0" required> 0: Normal</label><br>
+                <label><input type="radio" name="motorFace" value="1"> 1: Leve perda de expressão</label><br>
+                <label><input type="radio" name="motorFace" value="2"> 2: Expressão monotônica</label><br>
+                <label><input type="radio" name="motorFace" value="3"> 3: Face mascarada com dificuldade nos lábios</label><br>
+                <label><input type="radio" name="motorFace" value="4"> 4: Face mascarada completa</label>
+            </div>
+
+            <div class="updrs-item">
+                <strong>Tremor em Repouso (média):</strong><br>
+                <label><input type="radio" name="motorTremor" value="0" required> 0: Nenhum</label><br>
+                <label><input type="radio" name="motorTremor" value="1"> 1: Mínimo (leve tremor)</label><br>
+                <label><input type="radio" name="motorTremor" value="2"> 2: Leve (visível, <2 cm)</label><br>
+                <label><input type="radio" name="motorTremor" value="3"> 3: Moderado (2-4 cm)</label><br>
+                <label><input type="radio" name="motorTremor" value="4"> 4: Severo (>4 cm)</label>
+            </div>
+
+            <div class="updrs-item">
+                <strong>Rigidez (média):</strong><br>
+                <label><input type="radio" name="motorRigidity" value="0" required> 0: Nenhum</label><br>
+                <label><input type="radio" name="motorRigidity" value="1"> 1: Leve (detectável)</label><br>
+                <label><input type="radio" name="motorRigidity" value="2"> 2: Moderada (presente, mas não impede movimento)</label><br>
+                <label><input type="radio" name="motorRigidity" value="3"> 3: Severa (resiste movimento)</label><br>
+                <label><input type="radio" name="motorRigidity" value="4"> 4: Marcada (impede movimento)</label>
+            </div>
+
+            <div class="updrs-item">
+                <strong>Movimentos de Dedos (média):</strong><br>
+                <label><input type="radio" name="motorFingers" value="0" required> 0: Normal</label><br>
+                <label><input type="radio" name="motorFingers" value="1"> 1: Leve lentidão</label><br>
+                <label><input type="radio" name="motorFingers" value="2"> 2: Moderada (hesitação ocasional)</label><br>
+                <label><input type="radio" name="motorFingers" value="3"> 3: Severa (muito lenta)</label><br>
+                <label><input type="radio" name="motorFingers" value="4"> 4: Não consegue</label>
+            </div>
+
+            <div class="updrs-item">
+                <strong>Movimentos de Mãos (média):</strong><br>
+                <label><input type="radio" name="motorHands" value="0" required> 0: Normal</label><br>
+                <label><input type="radio" name="motorHands" value="1"> 1: Leve lentidão</label><br>
+                <label><input type="radio" name="motorHands" value="2"> 2: Moderada (hesitação)</label><br>
+                <label><input type="radio" name="motorHands" value="3"> 3: Severa (muito lenta)</label><br>
+                <label><input type="radio" name="motorHands" value="4"> 4: Não consegue</label>
+            </div>
+
+            <div class="updrs-item">
+                <strong>Agilidade de Perna (média):</strong><br>
+                <label><input type="radio" name="motorLegs" value="0" required> 0: Normal</label><br>
+                <label><input type="radio" name="motorLegs" value="1"> 1: Leve lentidão</label><br>
+                <label><input type="radio" name="motorLegs" value="2"> 2: Moderada (hesitação)</label><br>
+                <label><input type="radio" name="motorLegs" value="3"> 3: Severa (muito lenta)</label><br>
+                <label><input type="radio" name="motorLegs" value="4"> 4: Não consegue</label>
+            </div>
+
+            <div class="updrs-item">
+                <strong>Levantar da Cadeira:</strong><br>
+                <label><input type="radio" name="motorChair" value="0" required> 0: Levanta sem dificuldade</label><br>
+                <label><input type="radio" name="motorChair" value="1"> 1: Lento, mas sem ajuda</label><br>
+                <label><input type="radio" name="motorChair" value="2"> 2: Precisa de mãos</label><br>
+                <label><input type="radio" name="motorChair" value="3"> 3: Precisa de ajuda</label><br>
+                <label><input type="radio" name="motorChair" value="4"> 4: Não consegue sem ajuda</label>
+            </div>
+
+            <div class="updrs-item">
+                <strong>Postura:</strong><br>
+                <label><input type="radio" name="motorPosture" value="0" required> 0: Normal</label><br>
+                <label><input type="radio" name="motorPosture" value="1"> 1: Levemente curvada</label><br>
+                <label><input type="radio" name="motorPosture" value="2"> 2: Moderadamente curvada</label><br>
+                <label><input type="radio" name="motorPosture" value="3"> 3: Severamente curvada</label><br>
+                <label><input type="radio" name="motorPosture" value="4"> 4: Extremamente curvada</label>
+            </div>
+
+            <div class="updrs-item">
+                <strong>Marcha:</strong><br>
+                <label><input type="radio" name="motorGait" value="0" required> 0: Normal</label><br>
+                <label><input type="radio" name="motorGait" value="1"> 1: Passos curtos</label><br>
+                <label><input type="radio" name="motorGait" value="2"> 2: Arrasta pés</label><br>
+                <label><input type="radio" name="motorGait" value="3"> 3: Passos muito curtos ou festinação</label><br>
+                <label><input type="radio" name="motorGait" value="4"> 4: Não anda</label>
+            </div>
+
+            <div class="updrs-item">
+                <strong>Estabilidade Postural:</strong><br>
+                <label><input type="radio" name="motorStability" value="0" required> 0: Normal</label><br>
+                <label><input type="radio" name="motorStability" value="1"> 1: Leve instabilidade</label><br>
+                <label><input type="radio" name="motorStability" value="2"> 2: Recupera com esforço</label><br>
+                <label><input type="radio" name="motorStability" value="3"> 3: Cai sem ajuda</label><br>
+                <label><input type="radio" name="motorStability" value="4"> 4: Não anda sem apoio</label>
+            </div>
+
+            <div class="updrs-item">
+                <strong>Bradicinesia Corporal:</strong><br>
+                <label><input type="radio" name="motorBradykinesia" value="0" required> 0: Nenhum</label><br>
+                <label><input type="radio" name="motorBradykinesia" value="1"> 1: Leve lentidão</label><br>
+                <label><input type="radio" name="motorBradykinesia" value="2"> 2: Moderada (visível)</label><br>
+                <label><input type="radio" name="motorBradykinesia" value="3"> 3: Severa (movimentos raros)</label><br>
+                <label><input type="radio" name="motorBradykinesia" value="4"> 4: Incapacidade total</label>
+            </div>
+            <p><strong>Total Parte III:</strong> <span id="motorTotal">0</span></p>
+
+            <h3>Parte IV - Discinesia</h3>
+            <p>Selecione a opção que melhor descreve a discinesia.</p>
+
+            <div class="updrs-item">
+                <strong>Duração da Discinesia:</strong><br>
+                <label><input type="radio" name="dyskDuration" value="0" required> 0: Nenhuma</label><br>
+                <label><input type="radio" name="dyskDuration" value="1"> 1: 1-25% do dia</label><br>
+                <label><input type="radio" name="dyskDuration" value="2"> 2: 26-50% do dia</label><br>
+                <label><input type="radio" name="dyskDuration" value="3"> 3: 51-75% do dia</label><br>
+                <label><input type="radio" name="dyskDuration" value="4"> 4: 76-100% do dia</label>
+            </div>
+
+            <div class="updrs-item">
+                <strong>Incapacidade por Discinesia:</strong><br>
+                <label><input type="radio" name="dyskDisability" value="0" required> 0: Não incapacitante</label><br>
+                <label><input type="radio" name="dyskDisability" value="1"> 1: Levemente incapacitante</label><br>
+                <label><input type="radio" name="dyskDisability" value="2"> 2: Moderadamente</label><br>
+                <label><input type="radio" name="dyskDisability" value="3"> 3: Severamente</label><br>
+                <label><input type="radio" name="dyskDisability" value="4"> 4: Totalmente incapacitante</label>
+            </div>
+            <p><strong>Total Discinesia:</strong> <span id="dyskTotal">0</span></p>
+
+            <button type="submit">Obter Sugestão</button>
+        </form>
+
+        <div id="result" class="result"></div>
+        <p class="disclaimer">Aviso: Este aplicativo fornece sugestões gerais baseadas nos dados inseridos. Sempre consulte um médico antes de ajustar qualquer medicação.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
